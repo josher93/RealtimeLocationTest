@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "209417148332",
+    "firebase_url": "https://pruebageolocalizacion-7e7f0.firebaseio.com",
+    "project_id": "pruebageolocalizacion-7e7f0",
+    "storage_bucket": "pruebageolocalizacion-7e7f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209417148332:android:53b80accb96f152b",
+        "android_client_info": {
+          "package_name": "com.globalpaysolutions.realtimelocationtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209417148332-4llioenenkr5gue3urcitvp0ioa19ikc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.globalpaysolutions.realtimelocationtest",
+            "certificate_hash": "83EAE8BC43BE72D8F75D2B307718835CBE2CD6E3"
+          }
+        },
+        {
+          "client_id": "209417148332-bnesvman3uds0ihe9nl4oh54otguilnv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWt52UF5pKugPzxYzamxArylFU4EDrrnY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209417148332-bnesvman3uds0ihe9nl4oh54otguilnv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
