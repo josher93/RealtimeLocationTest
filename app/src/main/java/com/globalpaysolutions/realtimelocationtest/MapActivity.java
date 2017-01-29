@@ -17,6 +17,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.StreetViewPanoramaCamera;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -56,7 +59,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     {
         super.onStart();
         //insertUsers();
-        updateUsers();
+        //updateUsers();
     }
 
     @Override
@@ -140,4 +143,41 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 .title(friendUser.name + "-" + distance).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
         markerB.showInfoWindow();*/
     }
+
+    ChildEventListener locationsListener = new ChildEventListener()
+    {
+
+        @Override
+        public void onChildAdded(DataSnapshot dataSnapshot, String s)
+        {
+
+        }
+
+        @Override
+        public void onChildChanged(DataSnapshot dataSnapshot, String s)
+        {
+            // A comment has changed, use the key to determine if we are displaying this
+            // comment and if so displayed the changed comment.
+            User newUser = dataSnapshot.getValue(User.class);
+            String userKey = dataSnapshot.getKey();
+        }
+
+        @Override
+        public void onChildRemoved(DataSnapshot dataSnapshot)
+        {
+
+        }
+
+        @Override
+        public void onChildMoved(DataSnapshot dataSnapshot, String s)
+        {
+
+        }
+
+        @Override
+        public void onCancelled(DatabaseError databaseError)
+        {
+
+        }
+    };
 }

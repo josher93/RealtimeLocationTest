@@ -1,48 +1,14 @@
 package com.globalpaysolutions.realtimelocationtest.customs;
 
-import android.Manifest;
-import android.app.Activity;
-import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.location.Location;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-import com.directions.route.Route;
-import com.directions.route.Routing;
-import com.directions.route.RoutingListener;
-import com.firebase.client.DataSnapshot;
-import com.firebase.client.Firebase;
-import com.firebase.client.FirebaseError;
-import com.firebase.client.ValueEventListener;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.PolylineOptions;
-import com.snapsofts.demogmap.R;
-import com.snapsofts.demogmap.common.Constant;
-import com.snapsofts.demogmap.object.User;
+import com.globalpaysolutions.realtimelocationtest.R;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import de.greenrobot.event.EventBus;
-
-public class Act extends FragmentActivity implements OnMapReadyCallback, RoutingListener
+public class Act extends FragmentActivity /*implements OnMapReadyCallback, RoutingListener*/
 {
 
-    private GoogleMap mMap;
+    /*private GoogleMap mMap;
     private LatLng currenLocation;
     private LatLng friendLocation;
     private User friendUser;
@@ -52,14 +18,14 @@ public class Act extends FragmentActivity implements OnMapReadyCallback, Routing
     Button btnRoutting;
     @Bind(R.id.btnCancelRoutting)
     Button btnCancelRoutting;
-    private boolean routting = false;
+    private boolean routting = false;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
-        ButterKnife.bind(this);
+        //setContentView(R.layout.activity_maps);
+        /*ButterKnife.bind(this);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         String jsonReceiverUser = getIntent().getStringExtra(Constant.KEY_SEND_USER).split("---")[0];
@@ -68,11 +34,11 @@ public class Act extends FragmentActivity implements OnMapReadyCallback, Routing
         friendUser = gson.fromJson(jsonReceiverUser, User.class);
         currenUser = gson.fromJson(jsonCurrenUser, User.class);
         currenLocation = new LatLng(currenUser.latitude, currenUser.longitude);
-        friendLocation = new LatLng(friendUser.latitude, friendUser.longitude);
+        friendLocation = new LatLng(friendUser.latitude, friendUser.longitude);*/
 
     }
 
-    @OnClick(R.id.btnRoutting)
+    /*@OnClick(R.id.btnRoutting)
     public void setBtnRoutting()
     {
         routting = true;
@@ -84,10 +50,10 @@ public class Act extends FragmentActivity implements OnMapReadyCallback, Routing
     {
         routting = false;
         routing(currenLocation, friendLocation);
-    }
+    }*/
 
 
-    private ValueEventListener valueEventListenerFriendUser = new ValueEventListener()
+    /*private ValueEventListener valueEventListenerFriendUser = new ValueEventListener()
     {
         @Override
         public void onDataChange(DataSnapshot dataSnapshot)
@@ -210,10 +176,10 @@ public class Act extends FragmentActivity implements OnMapReadyCallback, Routing
         } catch (Exception e)
         {
         }
-    }
+    }*/
 
 
-    public class MyInfoWindowAdapter implements GoogleMap.InfoWindowAdapter
+    /*public class MyInfoWindowAdapter implements GoogleMap.InfoWindowAdapter
     {
         private View myContentsView;
 
@@ -238,5 +204,5 @@ public class Act extends FragmentActivity implements OnMapReadyCallback, Routing
         {
             return null;
         }
-    }
+    }*/
 }

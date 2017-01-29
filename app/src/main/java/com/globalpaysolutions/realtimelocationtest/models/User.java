@@ -8,8 +8,8 @@ public class User
 {
     private int id;
     private String key;
-    private long latitude;
-    private long longitude;
+    private double latitude;
+    private double longitude;
 
     public int getId()
     {
@@ -21,12 +21,12 @@ public class User
         return key;
     }
 
-    public long getLatitude()
+    public double getLatitude()
     {
         return latitude;
     }
 
-    public long getLongitude()
+    public double getLongitude()
     {
         return longitude;
     }
@@ -41,12 +41,12 @@ public class User
         this.key = key;
     }
 
-    public void setLatitude(long platitude)
+    public void setLatitude(double platitude)
     {
         latitude = platitude;
     }
 
-    public void setLongitude(long plongitude)
+    public void setLongitude(double plongitude)
     {
         longitude = plongitude;
     }
@@ -57,7 +57,7 @@ public class User
     }
 
 
-    public User(int id, String key, long latitude, long longitude)
+    public User(int id, String key, double latitude, double longitude)
     {
         this.setId(id);
         this.setKey(key);
